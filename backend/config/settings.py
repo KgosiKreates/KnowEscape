@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  '192.168.2.185',
                  '192.168.1.56',
                  '10.32.90.170',
+                 '192.168.0.170',
                  "http://localhost:3000",
                 "http://127.0.0.1:3000",
                 'api.knowescape.co.za',
@@ -53,6 +54,8 @@ CORS_ALLOWED_ORIGINS = [
 INSTALLED_APPS = [
     'knowescape',
     'api',
+    'accounts',
+    "learners",
     'rest_framework',
 
     'corsheaders',
@@ -76,7 +79,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend.urls'
+ROOT_URLCONF = 'config.urls'
 
 TEMPLATES = [
     {
@@ -94,7 +97,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'config.wsgi.application'
 
 
 # Database
@@ -133,6 +136,7 @@ else:
 #     }
 # }
 
+AUTH_USER_MODEL = "accounts.User"
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
