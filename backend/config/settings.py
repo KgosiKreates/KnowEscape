@@ -37,9 +37,7 @@ ALLOWED_HOSTS = ['127.0.0.1',
                  '192.168.1.56',
                  '10.32.90.170',
                  '192.168.0.170',
-                 "http://localhost:3000",
-                "http://127.0.0.1:3000",
-                'api.knowescape.co.za',
+                 'api.knowescape.co.za',
 ]
 
 CORS_ALLOWED_ORIGINS = [
@@ -57,6 +55,7 @@ INSTALLED_APPS = [
     'accounts',
     "learners",
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
 
     'corsheaders',
     'phonenumber_field',
@@ -137,6 +136,25 @@ else:
 # }
 
 AUTH_USER_MODEL = "accounts.User"
+
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework_simplejwt.authentication.JWTAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": (
+        "rest_framework.permissions.IsAuthenticated",
+    ),
+}
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
+    "ROTATE_REFRESH_TOKENS": True,
+    "BLACKLIST_AFTER_ROTATION": True,
+    "AUTH_HEADER_TYPES": ("Bearer",),
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators

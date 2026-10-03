@@ -1,4 +1,3 @@
-
 from rest_framework.response import Response
 from .models import Applicants, Companies
 from django.core.mail import EmailMultiAlternatives, BadHeaderError
@@ -8,9 +7,11 @@ from django.utils import timezone
 from .serializers import ContactSerializer
 from rest_framework import status
 from rest_framework.views import APIView
+from rest_framework.permissions import AllowAny
 
 
 class ContactView(APIView):
+    permission_classes = [AllowAny]
 
     def post(self, request):
         
