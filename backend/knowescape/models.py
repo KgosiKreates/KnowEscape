@@ -1,5 +1,8 @@
+from django.core.validators import RegexValidator
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+
+from learners.models import LearnerProfile
 
 
 # Create your models here.
@@ -12,7 +15,41 @@ class Applicants(models.Model):
     first_names = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     birth_date = models.DateField()
-    home_address = models.TextField()
+
+    national_id = models.CharField(
+        max_length=13,
+        validators=[
+            RegexValidator(
+                regex=r"^\d{13}$",
+                message="National ID must contain exactly 13 digits.",
+            )
+        ],
+    )
+
+    # Reuses LearnerProfile's QCTO-aligned choice lists directly, so an
+    # applicant's codes are guaranteed valid against the same spec
+    # their eventual LearnerProfile will be checked against.
+    nationality_code = models.CharField(
+        max_length=10,
+        choices=LearnerProfile.NationalityCode.choices,
+    )
+    gender = models.CharField(
+        max_length=1,
+        choices=LearnerProfile.Gender.choices,
+    )
+    home_language_code = models.CharField(
+        max_length=10,
+        choices=LearnerProfile.HomeLanguageCode.choices,
+    )
+    citizen_resident_status = models.CharField(
+        max_length=3,
+        choices=LearnerProfile.CitizenResidentStatus.choices,
+    )
+
+    home_address_1 = models.CharField(max_length=255)
+    home_address_2 = models.CharField(max_length=255)
+    home_address_3 = models.CharField(max_length=255, blank=True)
+
     email = models.EmailField(unique=True)
     phone_number = PhoneNumberField(region="ZA")
     disability = models.CharField(max_length=3, choices=DISABILITY_CHOICES)
