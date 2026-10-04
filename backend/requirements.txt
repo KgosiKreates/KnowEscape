@@ -7,12 +7,15 @@ Django==6.1
 django-cors-headers==4.9.0
 django-phonenumber-field==8.5.0
 djangorestframework==3.18.0
-djangorestframework-simplejwt==5.5.1
+djangorestframework_simplejwt==5.5.1
+et_xmlfile==2.0.0
 google-auth==2.56.2
 google-auth-oauthlib==1.4.0
+gunicorn==26.2.0
 idna==3.18
 ngrok==1.7.0
 oauthlib==3.3.1
+openpyxl==3.1.5
 phonenumbers==9.0.38
 psycopg2-binary==2.9.12
 pyasn1==0.6.4
@@ -27,4 +30,3 @@ requests-oauthlib==2.0.0
 sqlparse==0.6.0
 tzdata==2026.3
 urllib3==2.7.0
-openpyxl
