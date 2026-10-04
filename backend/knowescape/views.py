@@ -43,7 +43,7 @@ class ContactView(APIView):
                 subject=f'Inquiry by {data["first_name"]} {data["last_name"]} from {data["company"]}',
                 body=text_content,
                 from_email=data["email"],
-                to=['rhulanimogotsi28@gmail.com'],
+                to=['bookings@knowescape.co.za'],
             )
             msg.attach_alternative(html_content, "text/html")
             msg.send()

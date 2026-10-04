@@ -33,14 +33,12 @@ DEBUG = os.getenv("DEBUG", "False").lower() == "true"
 
 ALLOWED_HOSTS = ['127.0.0.1',
                  'localhost',
-                 '192.168.2.185',
-                 '192.168.1.56',
-                 '10.32.90.170',
-                 '192.168.0.170',
-                 'api.knowescape.co.za',
+                 'knowescape-backend.onrender.com',
 ]
 
 CORS_ALLOWED_ORIGINS = [
+    'knowescape-frontend-ten.vercel.app',
+    "https://knowescape.co.za",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
 ]
