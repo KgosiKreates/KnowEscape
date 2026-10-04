@@ -51,9 +51,11 @@ export default function OnboardingHero () {
                     and build a foundation for sustainable growth.
                 </TextAnimate>
                 <BlurFade className="actions" inView inViewMargin='0px' direction='right'>
+                    {/* Application intake is not ready yet.
                     <Link href='/' className="site-btn primary">
                         Apply
                     </Link>
+                    */}
                     <Link className="site-link primary" href={'/'}>
                         Our Services
                         <ArrowUpRight />

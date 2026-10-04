@@ -1,0 +1,27 @@
+KNOWESCAPE WEBSITE BUTTON INVENTORY
+Branch: lms-pending
+
+EVERY PAGE
+- Services menu toggle and "Talk to our team" button: web/components/Nav.tsx
+- Home and Contact are navigation links, not buttons: web/components/Nav.tsx
+
+HOME PAGE (/)
+- "Talk to our team" hero button: web/app/page.tsx
+- Contact form "Send" submit button: web/components/ContactSection.tsx
+- 12 FAQ question buttons: web/components/LandingFAQ.tsx, rendered by web/components/FAQ.tsx
+- "Our Services" is a link, not a button: web/components/OnboardingHero.tsx
+
+SERVICE PAGES
+All service page buttons are rendered by web/components/ServiceCategoryPage.tsx.
+The page content and subcategory counts are defined in web/util/servicePages.ts.
+Each service page has two "Talk to our team" buttons, one arrow button per
+subcategory, and four FAQ question buttons.
+
+- Skills Development (/services/skills-development): 2 team buttons, 5 subcategory arrow buttons, 4 FAQ buttons
+- Startup Support (/services/startup-support): 2 team buttons, 5 subcategory arrow buttons, 4 FAQ buttons
+- Enterprise & Supplier Development (/services/enterprise-supplier-development): 2 team buttons, 4 subcategory arrow buttons, 4 FAQ buttons
+- B-BBEE Advisory (/services/bbbee-advisory): 2 team buttons, 5 subcategory arrow buttons, 4 FAQ buttons
+
+NOT ACTIVE
+- Apply buttons remain commented out and are not visible or active.
+- Team and subcategory arrow buttons have no destination yet.

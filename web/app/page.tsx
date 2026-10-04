@@ -1,6 +1,5 @@
 import '../styles/landing.css'
 import Image from 'next/image';
-import Link from 'next/link';
 import Hypermenu from '@/components/Hypermenu';
 import LandingFAQ from '@/components/LandingFAQ';
 import ContactSection from '@/components/ContactSection';
@@ -10,7 +9,6 @@ import Accreditations from '@/components/Accreditations';
 import { BlurFade } from "@/components/ui/blur-fade"
 import { TextAnimate } from "@/components/ui/text-animate"
 
-import {ArrowUpRight} from "lucide-react"
 import BBBEESection from '@/components/BBBEE-Landing';
 import SkillsDevelopmentSection from '@/components/SkillsDevelopment-Section';
 
@@ -53,13 +51,14 @@ export default function Landing() {
 						</TextAnimate>
 					</div>
 					<BlurFade className="actions" inView inViewMargin='0px' direction='up'>
+						{/* Application intake is not ready yet.
 						<Link href='/' className="site-btn primary">
 							Apply
 						</Link>
-						<Link className="site-link primary" href={'/'}>
-							Book a Call
-							<ArrowUpRight />
-						</Link>
+						*/}
+						<button type="button" className="site-btn primary site-btn--conversation">
+							Talk to our team
+						</button>
 					</BlurFade>
 				</div>
 				<div className="header-backdrop">

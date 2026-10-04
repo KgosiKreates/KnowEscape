@@ -6,7 +6,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 import { motion } from "motion/react"
-import {ArrowUpRight, ChevronDown} from "lucide-react"
+import {ChevronDown} from "lucide-react"
 
 export default function Nav () {
     const pathname = usePathname()
@@ -155,13 +155,14 @@ export default function Nav () {
                 <Link className="nav-link" href="/contact">Contact</Link>
             </div>
             <div className="actions nav">
+                {/* Application intake is not ready yet.
                 <Link href='/' className="site-btn primary">
                     Apply
                 </Link>
-                <Link className="site-link primary" href={'/'}>
-                    Book a Call
-                    <ArrowUpRight />
-                </Link>
+                */}
+                <button type="button" className="site-btn primary site-btn--conversation">
+                    Talk to our team
+                </button>
             </div>
         </motion.nav>
     )

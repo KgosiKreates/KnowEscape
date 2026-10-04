@@ -165,6 +165,8 @@ body {
 	display: grid;
 	height: 2.5rem;
 	cursor: pointer;
+	padding: 0;
+	border: 0;
 	place-content: center;
 	border-radius: .25rem;
 	font-family: var(--body-font);
@@ -249,4 +251,22 @@ body {
 	.actions {
 		gap: 1rem;
 	}
+}
+
+.site-btn.site-btn--conversation {
+	width: auto;
+	height: auto;
+	min-height: 2.75rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: .65rem;
+	padding: 0 1.1rem;
+	font-size: .9rem;
+}
+
+.site-btn.site-btn--conversation svg {
+	width: 1rem;
+	height: 1rem;
+	flex-shrink: 0;
 }

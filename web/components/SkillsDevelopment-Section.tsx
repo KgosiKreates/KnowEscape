@@ -98,11 +98,13 @@ export default function SkillsDevelopmentSection () {
                                     {activePanel.description}
                                 </p>
 
+                                {/* Application intake is not ready yet.
                                 <div className="actions">
                                     <div className="site-btn primary">
                                         Apply
                                     </div>
                                 </div>
+                                */}
                             </div>
                         </motion.div>
                     </AnimatePresence>

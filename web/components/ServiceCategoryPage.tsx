@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { ArrowDown, ArrowUpRight } from 'lucide-react'
 import type { servicePages } from '@/util/servicePages'
 import FAQ from './FAQ'
@@ -16,9 +15,9 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
                     <h1 className="site-heading">{service.title}</h1>
                     <p className="site-body">{service.introduction}</p>
                     <div className="service-hero__actions">
-                        <Link href="/#contact-section" className="site-btn primary">
+                        <button type="button" className="site-btn primary site-btn--conversation">
                             Talk to our team <ArrowUpRight aria-hidden="true" />
-                        </Link>
+                        </button>
                         <a className="service-scroll-link" href="#service-offerings">
                             Explore services <ArrowDown aria-hidden="true" />
                         </a>
@@ -53,13 +52,13 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
                                 <h3 className="site-heading">{subcategory.title}</h3>
                                 <p className="site-body">{subcategory.description}</p>
                             </div>
-                            <Link
-                                href="/#contact-section"
+                            <button
+                                type="button"
                                 className="service-offering__link"
-                                aria-label={`Enquire about ${subcategory.title}`}
+                                aria-label={`Talk to our team about ${subcategory.title}`}
                             >
                                 <ArrowUpRight aria-hidden="true" />
-                            </Link>
+                            </button>
                         </article>
                     ))}
                 </div>
@@ -70,12 +69,12 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
             </div>
 
             <section className="service-cta" aria-labelledby="service-cta-title">
-                <p className="service-eyebrow">Let's build what's next</p>
+                <p className="service-eyebrow">Let&apos;s build what&apos;s next</p>
                 <h2 className="site-heading" id="service-cta-title">Ready to make progress?</h2>
-                <p className="site-body">Tell us where you are and what you want to achieve. We'll help you find a practical next step.</p>
-                <Link href="/#contact-section" className="site-btn primary">
-                    Start a conversation <ArrowUpRight aria-hidden="true" />
-                </Link>
+                <p className="site-body">Tell us where you are and what you want to achieve. We&apos;ll help you find a practical next step.</p>
+                <button type="button" className="site-btn primary site-btn--conversation">
+                    Talk to our team <ArrowUpRight aria-hidden="true" />
+                </button>
             </section>
         </main>
     )

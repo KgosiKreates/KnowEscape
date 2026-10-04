@@ -53,8 +53,7 @@
     margin-top: .5rem;
 }
 
-.service-hero__actions .site-btn,
-.service-cta .site-btn {
+.service-hero__actions .site-btn {
     width: auto;
     min-height: 2.75rem;
     display: inline-flex;
@@ -65,8 +64,7 @@
     font-size: .9rem;
 }
 
-.service-hero__actions .site-btn svg,
-.service-cta .site-btn svg {
+.service-hero__actions .site-btn svg {
     width: 1rem;
     height: 1rem;
 }
@@ -189,8 +187,11 @@
     height: 2.25rem;
     display: grid;
     place-items: center;
+    padding: 0;
     color: #ffffff;
+    cursor: pointer;
     border: 1px solid #ffffff45;
+    background: transparent;
     transition: color .2s ease, border-color .2s ease, background-color .2s ease;
 }
 
