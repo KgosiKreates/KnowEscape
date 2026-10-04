@@ -1,0 +1,342 @@
+.service-page {
+    color: #ffffff;
+}
+
+.service-hero {
+    width: min(1500px, 100%);
+    min-height: 34rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(22rem, .9fr);
+    gap: clamp(2rem, 6vw, 7rem);
+    align-items: center;
+    margin: 0 auto;
+    padding: 3rem 2rem 5rem;
+}
+
+.service-hero__copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.service-eyebrow {
+    margin: 0;
+    color: var(--ke-orange);
+    font-family: var(--body-font);
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    text-transform: uppercase;
+}
+
+.service-hero__copy h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: 4.5rem;
+    line-height: .98;
+}
+
+.service-hero__copy > .site-body {
+    max-width: 43rem;
+    margin: 0;
+    color: #ffffffa8;
+    font-size: 1.05rem;
+    line-height: 1.75;
+}
+
+.service-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: .5rem;
+}
+
+.service-hero__actions .site-btn,
+.service-cta .site-btn {
+    width: auto;
+    min-height: 2.75rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .65rem;
+    padding: 0 1.1rem;
+    font-size: .9rem;
+}
+
+.service-hero__actions .site-btn svg,
+.service-cta .site-btn svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.service-scroll-link {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    color: #ffffffb5;
+    font-family: var(--pp-mori);
+    font-size: .9rem;
+    transition: color .2s ease;
+}
+
+.service-scroll-link:hover {
+    color: var(--ke-orange);
+}
+
+.service-scroll-link svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.service-hero__visual {
+    min-height: 27rem;
+    overflow: hidden;
+    position: relative;
+    background: #202020;
+}
+
+.service-hero__visual img {
+    object-fit: cover;
+}
+
+.service-hero__image-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 48%, #1414149c 100%);
+}
+
+.service-hero__index {
+    position: absolute;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    color: #ffffff;
+    font-family: var(--body-font);
+    font-size: .75rem;
+    letter-spacing: 0;
+}
+
+.service-offerings {
+    width: min(1500px, 100%);
+    display: grid;
+    grid-template-columns: minmax(15rem, .75fr) minmax(0, 1.25fr);
+    gap: clamp(2rem, 8vw, 9rem);
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+    border-top: 1px solid #ffffff24;
+    scroll-margin-top: 2rem;
+}
+
+.service-offerings__intro {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+}
+
+.service-offerings__intro h2 {
+    max-width: 12ch;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.service-offerings__intro .site-body {
+    max-width: 24rem;
+    margin-top: 1rem;
+    color: #ffffff80;
+    line-height: 1.7;
+}
+
+.service-offering {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr) 2.5rem;
+    gap: 1.5rem;
+    align-items: start;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid #ffffff24;
+    scroll-margin-top: 3rem;
+}
+
+.service-offering:first-child {
+    padding-top: 0;
+}
+
+.service-offering__number {
+    padding-top: .3rem;
+    color: var(--ke-orange);
+    font-family: var(--body-font);
+    font-size: .8rem;
+}
+
+.service-offering__copy h3 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 1.45rem;
+    line-height: 1.25;
+}
+
+.service-offering__copy p {
+    max-width: 43rem;
+    margin: .7rem 0 0;
+    color: #ffffff91;
+    line-height: 1.7;
+}
+
+.service-offering__link {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    border: 1px solid #ffffff45;
+    transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.service-offering__link:hover {
+    color: #141414;
+    border-color: var(--ke-orange);
+    background-color: var(--ke-orange);
+}
+
+.service-offering__link svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+.service-faq {
+    width: min(1500px, 100%);
+    margin: 0 auto;
+    padding: 5rem 2rem 6rem;
+    border-top: 1px solid #ffffff24;
+}
+
+.service-faq .faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.service-faq .faq-header h2 {
+    margin: 0;
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.service-faq .faq-header p {
+    margin: 1rem 0 0;
+    color: #ffffff80;
+    line-height: 1.7;
+}
+
+.service-faq .faq-accordion {
+    max-width: 60rem;
+}
+
+.service-cta {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 5.5rem 2rem 6rem;
+    text-align: center;
+    border-top: 1px solid #ffffff24;
+}
+
+.service-cta .site-heading {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.service-cta .site-body {
+    max-width: 38rem;
+    margin: 0 0 .5rem;
+    color: #ffffff91;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .service-hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding-top: 2.5rem;
+    }
+
+    .service-hero__visual {
+        min-height: min(60vw, 25rem);
+    }
+
+    .service-hero__copy h1 {
+        font-size: 3.5rem;
+    }
+
+    .service-offerings {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .service-offerings__intro {
+        position: static;
+    }
+
+    .service-offerings__intro h2 {
+        max-width: 18ch;
+    }
+
+    .service-faq .faq-header h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .service-hero {
+        padding: 2rem 1.25rem 3.5rem;
+    }
+
+    .service-hero__copy h1 {
+        font-size: 3rem;
+    }
+
+    .service-hero__copy > .site-body {
+        font-size: .95rem;
+    }
+
+    .service-hero__visual {
+        min-height: 17rem;
+    }
+
+    .service-offerings {
+        padding: 3.5rem 1.25rem 4rem;
+    }
+
+    .service-faq {
+        padding: 3.5rem 1.25rem 4rem;
+    }
+
+    .service-offerings__intro h2,
+    .service-faq .faq-header h2,
+    .service-cta .site-heading {
+        font-size: 2rem;
+    }
+
+    .service-offering {
+        grid-template-columns: 2rem minmax(0, 1fr) 2.25rem;
+        gap: .75rem;
+        padding: 1.35rem 0;
+    }
+
+    .service-offering__copy h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-offering__copy p {
+        font-size: .9rem;
+    }
+
+    .service-cta {
+        padding: 4rem 1.25rem;
+    }
+}
