@@ -21,9 +21,9 @@ export default function Footer () {
                         <ul className="footer-column">
                             <h5>Get Around</h5>
                             <Link href="{% url 'home' %}">Home</Link>
-                            <Link href="#cta">About Us</Link>
+                            {/* <Link href="#cta">About Us</Link> */}
                             <Link href="#services">Our Services</Link>
-                            <Link href="#services">Our Faculty</Link>
+                            {/* <Link href="#services">Our Faculty</Link> */}
                             <Link href="#contact">Contact</Link>
                         </ul>
                         <ul className="footer-column">
