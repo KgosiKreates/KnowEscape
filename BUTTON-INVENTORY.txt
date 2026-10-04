@@ -24,4 +24,4 @@ subcategory, and four FAQ question buttons.
 
 NOT ACTIVE
 - Apply buttons remain commented out and are not visible or active.
-- Team and subcategory arrow buttons have no destination yet.
+- Team and subcategory arrow buttons link to https://cal.com/knowescape/30min.

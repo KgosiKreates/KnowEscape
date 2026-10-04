@@ -15,9 +15,14 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
                     <h1 className="site-heading">{service.title}</h1>
                     <p className="site-body">{service.introduction}</p>
                     <div className="service-hero__actions">
-                        <button type="button" className="site-btn primary site-btn--conversation">
+                        <a
+                            className="site-btn primary site-btn--conversation"
+                            href="https://cal.com/knowescape/30min"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             Talk to our team <ArrowUpRight aria-hidden="true" />
-                        </button>
+                        </a>
                         <a className="service-scroll-link" href="#service-offerings">
                             Explore services <ArrowDown aria-hidden="true" />
                         </a>
@@ -52,13 +57,15 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
                                 <h3 className="site-heading">{subcategory.title}</h3>
                                 <p className="site-body">{subcategory.description}</p>
                             </div>
-                            <button
-                                type="button"
+                            <a
                                 className="service-offering__link"
                                 aria-label={`Talk to our team about ${subcategory.title}`}
+                                href="https://cal.com/knowescape/30min"
+                                target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 <ArrowUpRight aria-hidden="true" />
-                            </button>
+                            </a>
                         </article>
                     ))}
                 </div>
@@ -72,9 +79,14 @@ export default function ServiceCategoryPage({ service }: { service: ServiceConte
                 <p className="service-eyebrow">Let&apos;s build what&apos;s next</p>
                 <h2 className="site-heading" id="service-cta-title">Ready to make progress?</h2>
                 <p className="site-body">Tell us where you are and what you want to achieve. We&apos;ll help you find a practical next step.</p>
-                <button type="button" className="site-btn primary site-btn--conversation">
+                <a
+                    className="site-btn primary site-btn--conversation"
+                    href="https://cal.com/knowescape/30min"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
                     Talk to our team <ArrowUpRight aria-hidden="true" />
-                </button>
+                </a>
             </section>
         </main>
     )

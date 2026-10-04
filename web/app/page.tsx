@@ -56,9 +56,14 @@ export default function Landing() {
 							Apply
 						</Link>
 						*/}
-						<button type="button" className="site-btn primary site-btn--conversation">
+						<a
+							className="site-btn primary site-btn--conversation"
+							href="https://cal.com/knowescape/30min"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
 							Talk to our team
-						</button>
+						</a>
 					</BlurFade>
 				</div>
 				<div className="header-backdrop">
