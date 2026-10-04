@@ -47,16 +47,13 @@ export default function Footer () {
                         <ul className="footer-column">
                             <h5>Physical Address</h5>
                             <li>
-                                11 Tamboti Street
+                                First Floor, Offices 3 & 5
                             </li>
                             <li>
-                                Birchleigh, Kempton Park
+                                Elgin Mall, Cnr Olienhout & Elgin Roads
                             </li>
                             <li>
-                                Johannesburg, Gauteng
-                            </li>
-                            <li>
-                                South Africa, 1618
+                                Kempton Park, Gauteng
                             </li>
                             <Link href="https://maps.app.goo.gl/aaUCho12uprLBjEC7" target="blank" className="map-link">
                                 Open in maps

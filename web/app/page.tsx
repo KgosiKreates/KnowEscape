@@ -2,6 +2,7 @@ import '../styles/landing.css'
 import Image from 'next/image';
 import Link from 'next/link';
 import Hypermenu from '@/components/Hypermenu';
+import LandingFAQ from '@/components/LandingFAQ';
 import ContactSection from '@/components/ContactSection';
 import OnboardingHero from '@/components/OnboardingHero'
 
@@ -74,6 +75,7 @@ export default function Landing() {
 			<OnboardingHero />
 			<SkillsDevelopmentSection />
 			<BBBEESection />
+			<LandingFAQ />
 			<ContactSection />
 		</>
 	);

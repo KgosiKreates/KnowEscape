@@ -1,0 +1,24 @@
+#faq .site-heading {
+    color: #ffffff;
+}
+
+#faq .site-heading span {
+    color: var(--ke-orange);
+}
+
+#faq .site-body {
+    color: #ffffff50;
+}
+
+#faq .faq-accordion button {
+    color: #ffffff80;
+    font-size: 1rem;
+}
+
+[data-slot="accordion-item"] {
+    padding: .5rem;
+}
+
+[data-slot="accordion-item"] [data-open] {
+    color: var(--ke-orange);
+}

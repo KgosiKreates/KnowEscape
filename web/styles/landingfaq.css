@@ -1,0 +1,22 @@
+#landing-faq {
+    height: 100%;
+    margin: 5rem 0;
+}
+
+.landing-faq-container {
+    height: 100%;
+    display: flex;
+    margin: 0 auto;
+    max-width: 1500px;
+    flex-direction: column;
+}
+
+#landing-faq .faq-container {
+    gap: 4rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#landing-faq #faq .site-heading {
+    font-size: 3rem;
+}

@@ -5,11 +5,15 @@ import '../styles/contactSection.css'
 import { toast } from "@/components/ui/toast"
 import { TextAnimate } from './ui/text-animate'
 import {ArrowUpRight, BadgeCheck} from "lucide-react"
+import { useState } from 'react';
 
 export default function ContactSection () {
 
+    const [sending, setSending] = useState(false)
+
     const submitContact: React.SubmitEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
+        setSending(prev => !prev)
 
         const form = e.currentTarget;
         const formData = new FormData(form);
@@ -56,6 +60,8 @@ export default function ContactSection () {
         } catch (error) {
             console.error(error);
         }
+
+        setSending(prev => !prev)
     };
 
     return (
@@ -90,9 +96,9 @@ export default function ContactSection () {
                         <div className="contact-column">
                             <h4 className="site-heading">Address</h4>
                             <ul className='site-body'>
-                                <li>11 Tamboti Street, Birchleigh</li>
+                                <li>First Floor, Offices 3 & 5</li>
+                                <li>Elgin Mall, Cnr Olienhout & Elgin Roads</li>
                                 <li>Kempton Park, Gauteng</li>
-                                <li>South Africa, 1618 </li>
                             </ul>
                         </div>
                     </div>
@@ -134,7 +140,9 @@ export default function ContactSection () {
                         <textarea name="message" rows={10} required id="message" placeholder='Any Extra Info?'/>
                     </div>
                     <div className="form-block submit-block">
-                        <button className="site-btn" type="submit">Send</button>                         
+                        <button className="site-btn" type="submit">
+                            {sending ? "sending..." : "send"}
+                        </button>                         
                     </div>
         
                 </form>
