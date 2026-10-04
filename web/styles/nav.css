@@ -145,6 +145,16 @@ nav .nav-logo img {
     font-family: var(--body-font);
 }
 
+.menu-category-link {
+    color: inherit;
+    text-decoration: none;
+    transition: color .2s ease;
+}
+
+.menu-category-link:hover {
+    color: var(--ke-orange);
+}
+
 .menu-group ul {
     width: max-content;
     text-align: left;
