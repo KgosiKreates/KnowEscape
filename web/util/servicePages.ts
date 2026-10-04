@@ -234,21 +234,3 @@ export const servicePages = {
     },
 } as const
 
-export type ServiceCategory = keyof typeof servicePages
-
-export const serviceAliases: Record<string, { category: ServiceCategory; section: string }> = {
-    'employee-development': { category: 'skills-development', section: 'employee-development' },
-    'workplace-skills-planning': { category: 'skills-development', section: 'workplace-skills-planning' },
-    'skills-development-training': { category: 'skills-development', section: 'skills-development-training' },
-    'skills-development-compliance': { category: 'skills-development', section: 'skills-development-compliance' },
-    'learnerships-workplace-training': { category: 'skills-development', section: 'learnerships-workplace-training' },
-    'startup-strategy': { category: 'startup-support', section: 'startup-strategy' },
-    'business-planning': { category: 'startup-support', section: 'business-planning' },
-    'business-mentorship': { category: 'startup-support', section: 'business-mentorship' },
-    'growth-market-readiness': { category: 'startup-support', section: 'growth-market-readiness' },
-    'business-registration-setup': { category: 'startup-support', section: 'business-registration-setup' },
-    'supplier-development': { category: 'enterprise-supplier-development', section: 'supplier-development' },
-    'enterprise-development': { category: 'enterprise-supplier-development', section: 'enterprise-development' },
-    'bbbee-esd-advisory': { category: 'enterprise-supplier-development', section: 'bbbee-esd-advisory' },
-    'business-growth-support': { category: 'enterprise-supplier-development', section: 'business-growth-support' },
-}
