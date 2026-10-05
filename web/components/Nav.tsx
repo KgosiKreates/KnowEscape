@@ -25,7 +25,7 @@ export default function Nav () {
             <div className="nav-list">
                 <Link className="nav-link" href="/">Home</Link>
 
-                <Link className="nav-link" href="/about">About</Link>
+                {/* <Link className="nav-link" href="/about">About</Link> */}
 
                 <button className="nav-link has-sub-menu" type="button">
                     Services
@@ -152,7 +152,7 @@ export default function Nav () {
                     </div>
                 </button>
 
-                <Link className="nav-link" href="/contact">Contact</Link>
+                <Link className="nav-link" href="#contact">Contact</Link>
             </div>
             <div className="actions nav">
                 {/* Application intake is not ready yet.
