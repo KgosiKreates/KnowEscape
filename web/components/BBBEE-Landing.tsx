@@ -78,7 +78,7 @@ export default function BBBEESection () {
                     BBB-EE Advisory
                 </Badge>
                 <h2 className="site-heading">
-                    How we make <span>BBB-EE</span> work for you
+                    How we make <span>B-BBEE</span> work for you
                 </h2>
                 <p className="site-body">
                     Knowescape Consulting provides practical B-BBEE advisory services 
