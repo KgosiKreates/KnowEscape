@@ -8,6 +8,7 @@ from .serializers import ContactSerializer
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.permissions import AllowAny
+from django.conf import settings
 
 
 class ContactView(APIView):
@@ -42,7 +43,7 @@ class ContactView(APIView):
             msg = EmailMultiAlternatives(
                 subject=f'Inquiry by {data["first_name"]} {data["last_name"]} from {data["company"]}',
                 body=text_content,
-                from_email=data["email"],
+                from_email=settings.DEFAULT_FROM_EMAIL,
                 to=['bookings@knowescape.co.za'],
             )
             msg.attach_alternative(html_content, "text/html")

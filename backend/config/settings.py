@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'api',
     'accounts',
     "learners",
+    "anymail",
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
 
@@ -194,6 +195,14 @@ STATIC_ROOT = BASE_DIR / 'staticfiles' # PRODUCTION
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
+if not DEBUG:
+    EMAIL_BACKEND = "anymail.backends.resend.EmailBackend"
+
+    ANYMAIL = {
+        "RESEND_API_KEY": os.getenv("RESEND_API_KEY"),
+    }
+
+
 EMAIL_HOST = os.getenv("EMAIL_HOST")
 EMAIL_PORT = int(os.getenv("EMAIL_PORT", 465))
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
@@ -201,7 +210,7 @@ EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
 
 EMAIL_USE_SSL = True
 EMAIL_USE_TLS = False
-DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = os.getenv("EMAIL_HOST_USER")
 
 
 # Default primary key field type
