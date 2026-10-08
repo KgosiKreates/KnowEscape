@@ -55,7 +55,7 @@ export default function Footer () {
                             <li>
                                 Kempton Park, Gauteng
                             </li>
-                            <Link href="https://maps.app.goo.gl/aaUCho12uprLBjEC7" target="blank" className="map-link">
+                            <Link href="https://maps.app.goo.gl/fUqb4BKKZK1NVS9Y8" target="blank" className="map-link">
                                 Open in maps
                                 <ArrowUpRight />
                             </Link>
