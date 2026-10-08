@@ -70,16 +70,16 @@ export default function Footer () {
                     <span> Ethernode Tech</span>
                 </Link>
                 <ul className="social-links">
-                    <Link href="https://www.facebook.com/profile.php?id=61565728498754">
+                    <Link href="https://www.facebook.com/profile.php?id=61565728498754" target="blank">
                         <FaFacebook />
                     </Link>
-                    <Link href="https://x.com/knowescapecons">
+                    <Link href="https://x.com/knowescapecons" target="blank">
                         <FaTwitter />
                     </Link>
                     <Link href="">
                         <FaLinkedin />
                     </Link>
-                    <Link href="https://www.instagram.com/knowescapecons">
+                    <Link href="https://www.instagram.com/knowescapecons" target="blank">
                         <FaInstagram />
                     </Link>
                 </ul>
