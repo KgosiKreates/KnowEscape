@@ -75,7 +75,7 @@ export default function BBBEESection () {
             <div className="bbbee-container">
                 <Badge variant="outline" className='site-badge'>
                     <BadgeCheck data-icon="inline-start" />
-                    BBB-EE Advisory
+                    B-BBEE Advisory
                 </Badge>
                 <h2 className="site-heading">
                     How we make <span>B-BBEE</span> work for you
