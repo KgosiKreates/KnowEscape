@@ -3,6 +3,32 @@
     margin: 5rem 0;
 }
 
+header#contact {
+    height: calc(100vh - 9rem);
+    margin: 2rem;
+    border-radius: .5rem;
+    background: url(../assets/images/contact-header.jpg) center no-repeat;
+    background-size: cover;
+}
+
+#contact .contact-container {
+    z-index: 999;
+    height: 100%;
+    display: flex;
+    padding: 0 2rem;
+    align-items: end;
+    background-color: #14141460;
+}
+
+#contact .site-heading {
+    color: #ffffff;
+    font-size: 8rem;
+}
+
+#contact .site-heading span {
+    color: var(--ke-orange);
+}
+
 #contact-section .contact-container {
     display: flex;
     margin: 0 auto;

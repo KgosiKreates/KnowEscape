@@ -152,7 +152,7 @@ export default function Nav () {
                     </div>
                 </button>
 
-                <Link className="nav-link" href="#contact">Contact</Link>
+                <Link className="nav-link" href="/contact">Contact</Link>
             </div>
             <div className="actions nav">
                 {/* Application intake is not ready yet.
