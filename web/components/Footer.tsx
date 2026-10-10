@@ -24,7 +24,7 @@ export default function Footer () {
                             <Link href="#cta">About Us</Link>
                             <Link href="#services">Our Services</Link>
                             <Link href="#services">Our Faculty</Link>
-                            <Link href="#contact">Contact</Link>
+                            <Link href="/contact">Contact</Link>
                         </ul>
                         <ul className="footer-column">
                             <h5>Our Services</h5>
