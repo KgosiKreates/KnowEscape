@@ -3,16 +3,22 @@
 import '../styles/nav.css'
 import Image from 'next/image'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { useState } from 'react'
 
 import { motion } from "motion/react"
-import {ChevronDown} from "lucide-react"
+import { ChevronDown, Menu, X } from "lucide-react"
 
 export default function Nav () {
-    const pathname = usePathname()
+    const [menuOpen, setMenuOpen] = useState(false)
+    const [servicesOpen, setServicesOpen] = useState(false)
+
+    const closeMenu = () => {
+        setMenuOpen(false)
+        setServicesOpen(false)
+    }
 
     return (
-        <motion.nav initial={{opacity: 0, y: 16}} animate={{opacity: 1, y: 0}} transition={{ duration: 1 }}>
+        <motion.nav aria-label="Main navigation" initial={{opacity: 0, y: 16}} animate={{opacity: 1, y: 0}} transition={{ duration: 1 }}>
             <div className="glow"></div>
             <Link href="/" className="nav-logo">
                 <Image
@@ -22,15 +28,25 @@ export default function Nav () {
                     priority
                 />
             </Link>
-            <div className="nav-list">
-                <Link className="nav-link" href="/">Home</Link>
+            <div className={`nav-list${menuOpen ? ' is-open' : ''}`} onClick={(event) => {
+                if ((event.target as HTMLElement).closest('a')) closeMenu()
+            }}>
+                <Link className="nav-link" href="/" onClick={closeMenu}>Home</Link>
 
                 {/* <Link className="nav-link" href="/about">About</Link> */}
 
-                <button className="nav-link has-sub-menu" type="button">
-                    Services
-                    <ChevronDown />
-                    <div className="sub-menu">
+                <div className={`nav-services${servicesOpen ? ' is-open' : ''}`}>
+                    <button
+                        className="nav-link has-sub-menu"
+                        type="button"
+                        aria-expanded={servicesOpen}
+                        aria-controls="services-sub-menu"
+                        onClick={() => setServicesOpen((open) => !open)}
+                    >
+                        Services
+                        <ChevronDown aria-hidden="true" />
+                    </button>
+                    <div className="sub-menu" id="services-sub-menu">
                         <h4 className='site-heading'>Our Services</h4>
                         <div className="menus">
                             <div className="menu-group">
@@ -150,10 +166,22 @@ export default function Nav () {
                             </div>
                         </div>
                     </div>
-                </button>
+                </div>
 
-                <Link className="nav-link" href="/contact">Contact</Link>
+                <Link className="nav-link" href="/contact" onClick={closeMenu}>Contact</Link>
             </div>
+            <button
+                className="mobile-menu-toggle"
+                type="button"
+                aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={menuOpen}
+                onClick={() => {
+                    setMenuOpen((open) => !open)
+                    setServicesOpen(false)
+                }}
+            >
+                {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+            </button>
             <div className="actions nav">
                 {/* Application intake is not ready yet.
                 <Link href='/' className="site-btn primary">

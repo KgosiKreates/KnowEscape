@@ -1,4 +1,3 @@
-import '../styles/landing.css'
 import Image from 'next/image';
 import Hypermenu from '@/components/Hypermenu';
 import LandingFAQ from '@/components/LandingFAQ';
@@ -11,6 +10,7 @@ import { TextAnimate } from "@/components/ui/text-animate"
 
 import BBBEESection from '@/components/BBBEE-Landing';
 import SkillsDevelopmentSection from '@/components/SkillsDevelopment-Section';
+import '../styles/landing.css'
 
 export default function Landing() {
 	return (
